@@ -34,6 +34,7 @@
     CALayer *layer1 = [self getLayerAtIndex:0];
     [view.layer addSublayer:layer1];
     CABasicAnimation *animation1 = [self getAnimationForLayer:layer1 andViewHeight:CGRectGetHeight(view.frame)];
+    animation1.beginTime = CACurrentMediaTime();
     [layer1 addAnimation:animation1 forKey:nil];
     
     CALayer *layer2 = [self getLayerAtIndex:1];
